@@ -17,23 +17,26 @@ def encode(password):
 
 
 def main():
+    # Pulls global variable into function
     global encoded_password
 
+    # Outputs basic menu
     print('Menu')
     print('----------')
     print('1. Encode')
     print('2. Decode')
     print('3. Quit')
 
+    # Gets user's choice from menu
     choice = input('Please enter an option: ')
 
-    if choice == '1':
+    if choice == '1':  # Encode
         password = input('Please enter your password to encode: ')
         encoded_password = encode(password)
         print('Your password has been encoded and stored!')
-    elif choice == '2':
+    elif choice == '2':  # Decode
         print('WORK IN PROGRESS!')
-    elif choice == '3':
+    elif choice == '3':  # Quit
         return
 
 
