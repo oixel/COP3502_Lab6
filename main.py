@@ -25,10 +25,11 @@ def encode(password):
 
 def decode(password):
     decoded_password = ''
+    #iterate through characters in password and add three (account for if the number turns negative when subtracting three)
     for i in password:
         decoded_char = int(i) - 3
         if decoded_char < 0:
-            decoded_char += 9
+            decoded_char += 10
         decoded_char = str(decoded_char)
         decoded_password += decoded_char
     return decoded_password
