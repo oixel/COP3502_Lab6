@@ -1,3 +1,7 @@
+# Name: Oixel Romero
+# Lab: Lab 6 - Version Control
+# October 25th, 2023
+
 encoded_password = ''
 
 
