@@ -18,6 +18,15 @@ def encode(password):
         # Concats new character to entire string
         new_password = new_password + new_char
     return new_password
+def decode(password):
+    decoded_password = ''
+    for i in password:
+        decoded_char = int(i) - 3
+        if decoded_char < 3:
+            decoded_char += 7
+        decoded_char = str(decoded_char)
+        decoded_password += decoded_char
+    return decoded_password
 
 
 def main():
@@ -39,7 +48,8 @@ def main():
         encoded_password = encode(password)
         print('Your password has been encoded and stored!')
     elif choice == '2':  # Decode
-        print('WORK IN PROGRESS!')
+        decoded_password = decode(encoded_password)
+        print(f'The encoded password is {encoded_password}, and the original password is {decoded_password}.')
     elif choice == '3':  # Quit
         return
 
